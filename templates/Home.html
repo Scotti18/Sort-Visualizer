@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Algorithm Visualizer</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="infoOverlay" id="infoOverlay">
+            <div id="closeButton" onclick="hideOverlay()"></div>
+            <h2 class="overlayContent" id="overlayTitle">Sample Algorithm</h2>
+            <p class="overlayContent" id="overlayText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                minus ea
+                nesciunt.
+                Illum unde quibusdam
+                ullam neque est, pariatur sed. Adipisci iste nostrum sit porro obcaecati soluta incidunt rerum!
+                Provident?</p>
+        </div>
+        <h2 id="pageTitle">Sorting Algorithm Visualizer</h2>
+        <div class="column_box margin_btm20" id="column-container">
+        </div>
+
+        <div class="content margin_btm20" id="optionBox">
+            <div class="slidecontainer">
+                <input type="range" min="10" max="100" value="55" class="slider" id="myRange">
+            </div>
+
+            <div class="output " id="output-box">
+            </div>
+
+            <div class="algo-select">
+                <label for="algorithm margin3" class="margin-right10">
+                    <h5>Choose a Sorting Algorithm:</h5>
+                </label>
+                <select class="selectOption margin3" name="algorithms" id="algorithmOption">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
+                <i style="font-size:24px" class="fa selectOption" onclick="showInfoOverlay()">&#xf05a;</i>
+                <select class="selectOption margin3" name="speed" id="speedOption">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="1.75">1.75x</option>
+                    <option value="2.0">2.0x</option>
+                </select>
+                <button class="selectOption margin3" id="sortButton"><i style="font-size:30px"
+                        class="fa">&#xf04b;</i></button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script src="/static/animation.js"></script>
+
+</html>

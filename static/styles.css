@@ -1,0 +1,223 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #1d1d1d;
+    background-image: linear-gradient(360deg, #1d1d1d 60%, #55efc4 120%);
+    color: #fafdf6;
+    min-height: 90%;
+    font-family: "Monaco", /*"Lucida Console", "Courier New", "Courier",*/ Monospace !important;
+    /*
+    background-image: linear-gradient(315deg, transparent, #1d1d1d 70%);*/
+}
+
+select {
+    font-family: inherit;
+}
+
+
+#pageTitle {
+    color: #1d1d1d;
+    background-color: #ffffff63;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 40%);
+}
+
+.infoOverlay {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 2;
+}
+
+.overlayContent {
+    text-align: start;
+    padding: 15px;
+    font-size: 25px;
+}
+
+#closeButton {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 70px;
+}
+
+#closeButton::after {
+    content: "\00d7";
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+}
+
+#closeButton:hover {
+    cursor: pointer;
+}
+
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px auto 0 auto;
+    align-items: center;
+}
+
+.column_box {
+    width: 90vw;
+    background-color: #2d2a32;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.column {
+    width: 1vw;
+    height: 200px;
+    background-color: black;
+    margin-right: 0.4vw;
+    background-color: #1d1d1d;
+    background-image: linear-gradient(0deg, #44A08D, #093637);
+    
+}
+
+.slidecontainer {
+    width: 37vw;
+    display: flex;
+    align-items: center;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: white;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #55efc4;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #55efc4;
+    cursor: pointer;
+  }
+
+  .output {
+      width: 5vw;
+      height: 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4vw;
+      color: #55efc4;
+      box-shadow: 1px 2px 4px rgb(0 0 0 / 40%);
+  }
+
+  .selectOption {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+    #sortButton {
+        background-color: #55efc4;
+        color: #1d1d1d;
+        font-weight: bold;
+    }
+    #sortButton:hover {
+        background-color: #1f7559;
+        box-shadow: 1px 2px 4px rgb(0 0 0 / 40%);
+    }
+    #sortButton:disabled {
+        background-color: #093637;
+        cursor: auto;
+    }
+
+    #optionBox > div{
+        margin: 5px;
+    }
+
+  .selectOption:hover {
+      cursor: pointer;
+  }
+
+  .algo-select {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .algo-select > element {
+      margin: 5px;
+  }
+
+  .margin3 {
+      margin: 3px;
+  }
+
+  .margin-right10 {
+    margin-right: 10px;
+  }
+
+  .margin_btm20 {
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .column_box {
+        width: 100%;
+    }
+
+    #pageTitle {
+        padding: 5px;
+        font-size: 22px;
+    }
+    
+.overlayContent {
+    padding: 10px;
+    font-size: 18px;
+}
+}
+
+@media (max-width: 600px) {
+    .selectOption {
+        font-size: 15px;
+        padding: 8px;
+    }
+}
